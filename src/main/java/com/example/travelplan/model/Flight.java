@@ -1,10 +1,14 @@
 package com.example.travelplan.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name ="flights")
 
