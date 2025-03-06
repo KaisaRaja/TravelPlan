@@ -33,19 +33,21 @@ public class FlightService {
     public List<Flight> getFlightsByPrice(double price) {
         return flightRepository.findByPriceLessThanEqual(price);
     }
-    public List<Flight> filterFlights(String destination, LocalDate date, LocalTime time, double price) {
-     if (destination != null && date != null && time != null && price > 0) {
+    public List<Flight> filterFlights(String destination, LocalDate date, LocalTime time, Double price) {
+     if (destination != null && date != null && time != null && price != null) {
          return flightRepository.findByDestinationAndDateAndTimeAndPriceLessThanEqual
                  (destination, date, time, price);
      } else if (destination != null && date != null) {
          return flightRepository.findByDestinationAndDate(destination, date);
-     } else if (destination != null) {
+     } else if (destination != null && date != null && price != null) {
+         return flightRepository.findByDestinationAndDateAndPriceLessThanEqual(destination, date, price);
+     }else if (destination != null) {
          return flightRepository.findByDestination(destination);
      } else if (date != null) {
          return flightRepository.findByDate(date);
      } else if (time != null) {
          return flightRepository.findByTime(time);
-     } else if (price > 0) {
+     } else if (price != null) {
          return flightRepository.findByPriceLessThanEqual(price);
      } else {
          return flightRepository.findAll();

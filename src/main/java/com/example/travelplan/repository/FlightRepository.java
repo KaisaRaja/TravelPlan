@@ -18,4 +18,5 @@ public interface FlightRepository extends JpaRepository<Flight, Long> {
       List<Flight> findByTimeBetween(LocalTime start, LocalTime end);
       List<Flight> findByDestinationAndDateAndTimeAndPriceLessThanEqual
               (String destination, LocalDate date, LocalTime time, Double price);
+      List<Flight> findByDestinationAndDateAndPriceLessThanEqual(String destination, LocalDate date, Double price);
 }
