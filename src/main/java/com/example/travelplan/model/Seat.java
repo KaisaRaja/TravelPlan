@@ -1,24 +1,20 @@
 package com.example.travelplan.model;
 
 public class Seat {
-    private int row;
-    private int column;
+    private String seatNo;
     private boolean occupied;
     private boolean isWindow;
     private boolean hasExtraLegroom;
     private boolean isExitRow;
 
-    public Seat(int row, char column, boolean isWindow, boolean hasExtraLegroom, boolean isExitRow) {
-        this.row = row;
-        this.column = column;
+    public Seat(String seatNo, boolean isOccupied, boolean isWindow, boolean hasExtraLegroom, boolean isExitRow) {
+        this.seatNo = seatNo;
         this.occupied = false;
         this.isWindow = isWindow;
         this.hasExtraLegroom = hasExtraLegroom;
         this.isExitRow = isExitRow;
     }
-
-    public int getRow() {return row;}
-    public int getColumn() {return column;}
+    public String getSeatNo() { return seatNo; }
     public boolean isOccupied() {return occupied;}
     public boolean isWindow() {return isWindow;}
     public boolean isHasExtraLegroom() {return hasExtraLegroom;}
