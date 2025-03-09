@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/flights")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class FlightController {
     private final FlightService flightService;
 
