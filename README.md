@@ -28,5 +28,6 @@ Selles projektis on keskendutud reisi marsruutide koostamisele, peatuste planeer
 
 3. Järgi juhiseid rakenduse seadistamiseks ja käivitamiseks
 
+
 Autor: Kaisa Raja
 Projekti eesmärk: Õppimine
